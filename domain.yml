@@ -17,10 +17,13 @@ intents:
 - change_message
 - restart
 - leave_name
+- enquire
 entities:
 - email
 - message
 - PERSON
+- DATE
+- CARDINAL
 slots:
   email:
     type: text

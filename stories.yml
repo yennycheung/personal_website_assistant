@@ -1,6 +1,0 @@
-stories:
- - story: greet and contact
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: enquire
