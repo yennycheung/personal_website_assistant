@@ -1,0 +1,14 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! I'm Yenny's AI assistant. How can I help you?
+       - text: |
+           Hi!
+   utter_ask_email:
+       - text: |
+           What is your email address?
+   utter_email_sent:
+       - text: |
+           I've contacted Yenny with your email: {email}.
+       - text: |
+           I left your email with Yenny. She will reply to you promptly.

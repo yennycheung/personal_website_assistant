@@ -1,0 +1,24 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey!
+    - Hello
+    - Good day
+    - Good morning
+- intent: contact
+  examples: |
+    - I want to work with you
+    - Can I invite you to a conference
+    - Can you speak at our event?
+    - I want to contact her
+    - How can I contact her?
+    - Nice! How can I contact her?
+    - Contact Yenny for me
+    - Can you contact Yenny for me?
+    - Can I get you to contact her for me?
+- intent: enquire_work
+  examples: |
+    - I want to work with her
+    - When can I book her?

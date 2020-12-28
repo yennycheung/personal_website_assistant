@@ -1,0 +1,46 @@
+version: "2.0"
+stories:
+- story: Sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 2e01d672d9c94638bb154b78dd499385
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enquire_work
+  - action: utter_ask_yenny
+  - intent: affirm
+  - action: contact_form
+  - active_loop: contact_form
+  - slot_was_set:
+    - requested_slot: name
+  - intent: leave_name
+    entities:
+    - name: Jane Smith
+  - action: contact_form
+  - slot_was_set:
+    - name: Jane Smith
+  - slot_was_set:
+    - requested_slot: email
+  - intent: leave_email
+    entities:
+    - email: cheungyenny@gmail.com
+  - action: contact_form
+  - slot_was_set:
+    - email: cheungyenny@gmail.com
+  - slot_was_set:
+    - requested_slot: message
+  - intent: leave_message
+  - action: contact_form
+  - slot_was_set:
+    - message: This is my message to Yenny.
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_email_sent
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye

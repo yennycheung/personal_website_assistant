@@ -1,0 +1,45 @@
+version: "2.0"
+rules:
+- rule: Hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: Nothing to do
+  steps:
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- rule: Bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_responsibility
+- rule: Interruption in contact form
+  condition:
+  - active_loop: contact_form
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: contact_form
+  - active_loop: contact_form
+- rule: Activate form
+  steps:
+  - intent: contact
+  - action: contact_form
+  - active_loop: contact_form
+- rule: Submit form
+  condition:
+  - active_loop: contact_form
+  steps:
+  - action: contact_form
+  - active_loop: null
+  - action: utter_email_sent
+  - action: utter_anything_else
+- rule: See Yenny's work
+  steps:
+  - intent: see_work
+  - action: utter_example_work
+- rule: Thank you
+  steps:
+  - intent: thankyou
+  - action: utter_noworries
+  - action: utter_anything_else

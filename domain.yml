@@ -1,0 +1,83 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- contact
+- see_work
+- bot_challenge
+- deny
+- affirm
+- enquire_work
+- chitchat
+- thankyou
+- leave_email
+- leave_message
+- change_message
+- restart
+- leave_name
+entities:
+- name
+- email
+- message
+slots:
+  email:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  message:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  name:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_goodbye:
+  - text: Thank you for your time. Bye!
+  utter_responsibility:
+  - text: I am Yenny's digital assistant, powered by Rasa. I can look up Yenny's work
+      for you and contact her on your behalf. What can I do for you today?
+  utter_greet:
+  - text: Hello, I'm Yenny's AI assistant. How can I help you?
+  utter_email_sent:
+  - text: 'Hi {name}, I passed Yenny your email: {email} and your message: {message},
+      if there is a match, she will reply to you promptly.'
+  utter_ask_email:
+  - text: Could I get your email please?
+  - text: What is your email address?
+  utter_anything_else:
+  - text: Is there anything else I could help you with?
+  utter_ask_message:
+  - text: I could pass on a short message to Yenny. Please leave your message with
+      me.
+  utter_example_work:
+  - text: 'This is her latest article 📄: Designing a growth framework for your engineering
+      team 👩🏻‍💻. https://leaddev.com/career-paths-progression-promotion/designing-growth-framework-your-engineering-team.
+      She also spoke at a panel about building a culture of belonging 🎤: https://leaddev.com/events/perspectives-what-culture-belonging-actually-looks.
+      Enjoy!'
+  utter_ask_yenny:
+  - text: I need to check with Yenny on this. Would you like me to contact her on
+      your behalf?
+  utter_chitchat:
+  - text: Not sure what you mean by that. I'm still in training. Sorry!
+  utter_noworries:
+  - text: No worries. Happy to help!
+  utter_ask_name:
+  - text: What's your name?
+forms:
+  contact_form:
+    email:
+    - entity: email
+      type: from_entity
+    message:
+    - entity: message
+      type: from_text
+    name:
+    - entity: name
+      type: from_entity
