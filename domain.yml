@@ -18,9 +18,9 @@ intents:
 - restart
 - leave_name
 entities:
-- name
 - email
 - message
+- PERSON
 slots:
   email:
     type: text
@@ -46,7 +46,7 @@ responses:
   utter_greet:
   - text: Hello, I'm Yenny's AI assistant. How can I help you?
   utter_email_sent:
-  - text: 'Hi {name}, I passed Yenny your email: {email} and your message: {message},
+  - text: 'Hi {name}, I passed Yenny your email: {email} and your message: "{message}",
       if there is a match, she will reply to you promptly.'
   utter_ask_email:
   - text: Could I get your email please?
@@ -69,7 +69,7 @@ responses:
   utter_noworries:
   - text: No worries. Happy to help!
   utter_ask_name:
-  - text: What's your name?
+  - text: Please share with me your name, so Yenny can address you in her reply.
 forms:
   contact_form:
     email:
@@ -79,5 +79,6 @@ forms:
     - entity: message
       type: from_text
     name:
-    - entity: name
+    - entity: PERSON
+      intent: leave_name
       type: from_entity

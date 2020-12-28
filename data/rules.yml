@@ -6,37 +6,43 @@ stories:
   - action: utter_greet
   - intent: deny
   - action: utter_goodbye
-- story: Story from Conversation ID 2e01d672d9c94638bb154b78dd499385
+- story: Story from Conversation ID d9e22e25bc5a4824a16546e15536143c
   steps:
   - intent: greet
   - action: utter_greet
   - intent: enquire_work
+    entities:
+    - PERSON: Yenny
   - action: utter_ask_yenny
   - intent: affirm
   - action: contact_form
   - active_loop: contact_form
   - slot_was_set:
-    - requested_slot: name
-  - intent: leave_name
-    entities:
-    - name: Jane Smith
-  - action: contact_form
-  - slot_was_set:
-    - name: Jane Smith
-  - slot_was_set:
     - requested_slot: email
   - intent: leave_email
     entities:
-    - email: cheungyenny@gmail.com
+    - email: jaychan@gmail.com
   - action: contact_form
   - slot_was_set:
-    - email: cheungyenny@gmail.com
+    - email:
+      - jaychan@gmail.com
   - slot_was_set:
     - requested_slot: message
-  - intent: leave_message
+  - intent: enquire_work
+    entities:
+    - PERSON: Hey Yenny
+    - PERSON: Jay Chan
   - action: contact_form
   - slot_was_set:
-    - message: This is my message to Yenny.
+    - message: Sure. Hey Yenny, it is Jay Chan here. Could we work together on an upcoming conference?
+  - slot_was_set:
+    - requested_slot: name
+  - intent: leave_name
+    entities:
+    - PERSON: Jay Chan
+  - action: contact_form
+  - slot_was_set:
+    - name: Jay Chan
   - slot_was_set:
     - requested_slot: null
   - active_loop: null

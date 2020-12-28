@@ -23,6 +23,11 @@
 - Hey there
 - HI
 - Hello there
+- Yo
+- [Logong](PERSON)
+- yo
+- Hiii!
+- Hii
 
 ## intent:goodbye
 - bye
@@ -31,6 +36,8 @@
 - Goodbye
 - All done?
 - Bye!
+- Byee
+- Byeeee
 
 ## intent:bot_challenge
 - are you a bot?
@@ -47,6 +54,8 @@
 - what's going on?
 - ?
 - What else can you do?
+- euh what else can you tell me?
+- What can you do Yenny's Assistant?
 
 ## intent:deny
 - Nothing
@@ -62,6 +71,8 @@
 - No, all is good.
 - Awesome, no!
 - Nope
+- Nope all done thanks!
+- No, this is perfect.
 
 ## intent:see_work
 - I want to see Yenny's work.
@@ -90,17 +101,26 @@
 - That is great, thank you!
 - Thanks.
 - Thank you
+- Yo bae you great!
+- Let's work together soon!
+- Great!
+- thanks see ta
 
 ## intent:affirm
 - Okay
 - Sure
 - Okay.
 - Yes.
+- Sure thing!
+- Yes please!
+- Yep
+- Yes please.
+- That will be great.
 
 ## intent:enquire_work
 - I want to work with Yenny
 - Do you do talks?\
-- Hello My name is Lauris and I would want you to speak at my awesome conference
+- Hello My name is [Lauris](PERSON) and I would want you to speak at my awesome conference
 - Do you do talks
 - Do you do talks?
 - do you do talks
@@ -109,6 +129,22 @@
 - I want to hire Yenny
 - Can I hire Yenny for a talk?
 - Hi Yenny, I'd like to collaborate with you. What are your rates for giving a talk?
+- Hey Yenny I was reading your article and I'm wondering if you'd like to write for my blog.
+- My name is Jessica. I want to work with Yenny.
+- Hey Yenny, I'd like to work with you in an upcoming conference. Would you be up for it?
+- Can you work with me?
+- Do you want to organize a conference together?
+- I want to work with Yenny on an upcoming conference.
+- Sure. Hey Yenny, it is Jay Chan here. Could we work together on an upcoming conference?
+- Hey Yenny, my name is Ashley Green. I want to invite you to speak at my upcoming meetup.
+- Okay. My name is Ashley Green. I want to invite Yenny to give a talk at my event.
+- I want to work with Yenny on a talk.
+- I'm an organizer at PyCon.DE, I'm wondering if Yenny is interested to give a talk at the next conference.
+- Hey Yenny, are you interested to speak at the next [PyCon](message) conference?
+- I want to work with Yenny.
+- My name is Daniel, I'm wondering if Yenny is interested in writing an article for us.
+- Hey Yenny, I'm interested to have you write a blog post for our website, will you be up for it?
+- I'm interested to invite Yenny to write a blog post for our website.
 
 ## intent:contact
 - I want to contact her.
@@ -119,6 +155,10 @@
 - Contact her.
 - Can you contact her on my behalf?
 - Can I contact Yenny?
+- Can I contact Yenny
+- I would want to contact her for a conference please
+- I wish to contact her
+- I thought you will contact Yenny for me.
 
 ## intent:leave_message
 - this is my message.
@@ -133,6 +173,8 @@
 - This is my message to Yenny.
 - My message is: I found your work interesting, can we get the chance to collaborate?
 - Sure! Will it be possible to collaborate in the future?
+- Awesome. Hey Yenny, it's Sofia here. We have met at GHC. Do you remember me? Will you be interested to speak at the next PyLadies Meetup?
+- Yo helping with da bot
 
 ## intent:chitchat
 - Is she the most awesome person on earth?
@@ -148,14 +190,35 @@
 - lauris@bae.love
 - [yenny@gmail.com](email)
 - [hhpythonpizza@gmail.com](email)
+- [albert@gmail.com](email)
+- Sure. [jessica@gmail.com](email)
+- [l@j.com](email)
+- My email is [jaychan@gmail.com](email)
+- [ashleygreen@gmail.com](email)
+- My email is [sofia@gmail.com](email)
+- My email is [alex@pycon.de](email)
+- Sure, my email is [daniel@gmail.com](email)
+- [lauris@jullien.fr](PERSON)
+- [teresa@icloud.com](email)
 
 ## intent:change_message
 - Can I change my message? I made a mistake
+- The message is not correct, can I still change it?
+- I want to rewrite the message.
 
 ## intent:leave_name
-- [Jame Smith](name)
-- [Jane](name)
-- My name is [Lauris Jullien](name).
-- [John Doe](name).
-- [John](name)
-- My name is [Jane Smith](name)
+- [Jame Smith](PERSON)
+- [Jane](PERSON)
+- My name is [Lauris Jullien](PERSON).
+- [John Doe](PERSON).
+- [John](PERSON)
+- My name is [Jane Smith](PERSON)
+- My name is Albert
+- My name is [Vishnu](PERSON).
+- My name is Jessica.
+- [John Smith](PERSON)
+- My name is [logong](PERSON)
+- My name is Jay Chan.
+- My name is Sofia Gomez.
+- My name is Daniel Behrens.
+- My name is Teresa Gold.

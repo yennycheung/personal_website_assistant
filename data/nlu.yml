@@ -18,7 +18,8 @@ nlu:
     - Contact Yenny for me
     - Can you contact Yenny for me?
     - Can I get you to contact her for me?
-- intent: enquire_work
+    - When can I book her?
+- intent: enquire
   examples: |
     - I want to work with her
-    - When can I book her?
+    - I want to invite Yenny to speak at [PyCon](message).
